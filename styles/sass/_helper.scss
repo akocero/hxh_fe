@@ -61,7 +61,8 @@ $spaceAmounts: (0, 1, 2, 3, 4, 5, 6, 7);
 .shadow {
 	border: none;
 	&-sm {
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.096),
+			0 3px 6px rgba(0, 0, 0, 0.151);
 	}
 
 	&-md {

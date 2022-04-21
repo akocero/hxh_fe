@@ -2,3 +2,32 @@
 @import "sass/helper";
 @import "sass/media_query";
 @import "sass/typography";
+
+.container {
+	max-width: 1200;
+	margin: 0 auto;
+}
+
+.character__list {
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1rem;
+}
+
+.card {
+	padding: 1.6rem;
+	border-radius: 1rem;
+	background-color: rgb(32, 32, 32);
+
+	&__img-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__content {
+	}
+}
