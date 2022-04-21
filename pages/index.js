@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export async function getStaticProps() {
-	const res = await fetch("http://localhost:3001/api/characters");
+	const res = await fetch("https://hxh-api.herokuapp.com/api/characters");
 	const characters = await res.json();
 
 	return {
