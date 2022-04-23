@@ -17,7 +17,7 @@ export default function Home({ characters }) {
 			<div className="intro">
 				<div className="intro__content">
 					<h1 className="heading__1 mb-2">
-						The most popular anime API
+						THE MOST POPULAR <span>ANIME API</span>
 					</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing

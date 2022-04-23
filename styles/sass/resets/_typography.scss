@@ -37,24 +37,24 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: "Kanit";
+	font-family: "Open Sans";
 	font-weight: 400;
 }
 
 .heading {
 	&__1 {
-		font-size: 6.4rem;
+		font-size: 5.2rem;
 		line-height: 120%;
 		letter-spacing: 2px;
-		font-weight: 600;
-		text-shadow: -2px 4px 0 rgba(0, 0, 0, 0.3);
+		font-weight: 900;
+		text-shadow: $text-shadow;
 		// text-shadow: $text-shadow;
 
-		// span {
-		// 	color: var(--accent);
-		// }
+		span {
+			color: var(--accent);
+		}
 
-		// @include respond(phone) {
+		// @include respond(phGuy) {
 		// 	font-size: 5.8rem;
 		// }
 	}

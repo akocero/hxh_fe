@@ -2,6 +2,12 @@
 	font-family: "Kanit";
 	font-weight: 500;
 	letter-spacing: 0.8px;
+
+	&__title {
+		span {
+			color: var(--accent);
+		}
+	}
 	&__nav {
 		height: 9.2rem;
 		align-items: center;

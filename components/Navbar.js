@@ -4,12 +4,14 @@ export default function Navbar() {
 	return (
 		<header className="navbar">
 			<div className="navbar__nav">
-				<div>Hunter x Hunter API</div>
+				<div className="navbar__title">
+					Hunter x <span>Hunter</span> API
+				</div>
 
 				<ul className="navbar__nav-list">
 					{navbarItems.map((item) => (
 						<li className="navbar__nav-item" key={item}>
-							{item}
+							{item.substring(1)}
 						</li>
 					))}
 				</ul>
