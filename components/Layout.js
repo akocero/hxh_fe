@@ -4,7 +4,7 @@ import Head from "next/head";
 
 export default function Layout({ children }) {
 	return (
-		<div className="wrapper">
+		<div>
 			<Head>
 				<title>@eugenebadato</title>
 				<meta

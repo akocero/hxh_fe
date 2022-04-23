@@ -1,0 +1,18 @@
+.navbar {
+	&__nav {
+		height: 9.2rem;
+		align-items: center;
+		display: flex;
+		max-width: $max-width;
+		margin: 0 auto;
+	}
+
+	&__nav-list {
+		margin-left: auto;
+		display: flex;
+
+		& > * {
+			margin-left: 2.8rem;
+		}
+	}
+}

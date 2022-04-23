@@ -13,13 +13,13 @@ export async function getStaticProps() {
 
 export default function Home({ characters }) {
 	return (
-		<main>
+		<main className="wrapper">
 			<div className="heading">
 				<h1>Hunter x Hunter API</h1>
 			</div>
 
 			<div className="character__list">
-				<div className="container grid">
+				<div className="grid">
 					{characters.map((item) => (
 						<div className="card shadow-sm" key={item._id}>
 							<div className="card__img-container">
