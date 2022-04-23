@@ -1,3 +1,12 @@
+@font-face {
+	font-family: "Inter var";
+	font-weight: 100 900;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: "Regular";
+	src: url("../../public/InterVar/Inter-roman.var.woff2") format("woff2");
+}
+
 @import "abstracts/variables";
 
 @import "resets/typography";
@@ -8,6 +17,7 @@
 
 @import "components/card";
 @import "components/buttons";
+@import "components/tags";
 
 @import "layouts/navbar";
 @import "layouts/footer";
@@ -33,4 +43,19 @@
 
 .characters {
 	margin-bottom: 5rem;
+}
+
+.api {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+	&__image {
+		transform: rotateZ(-2deg);
+		svg {
+			border-radius: 1rem;
+		}
+	}
+	&__content {
+		max-width: 40%;
+	}
 }

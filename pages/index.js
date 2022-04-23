@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Api from "../public/images/api.svg";
 export async function getStaticProps() {
 	const res = await fetch("https://hxh-api.herokuapp.com/api/characters");
 	const characters = await res.json();
@@ -16,8 +16,13 @@ export default function Home({ characters }) {
 		<main className="wrapper">
 			<section className="intro">
 				<div className="intro__content">
+					{/* <h1 className="heading__1 mb-2">
+						The Most Popular <span>Anime API</span>
+					</h1> */}
+
 					<h1 className="heading__1 mb-2">
-						THE MOST POPULAR <span>ANIME API</span>
+						Explore <br />
+						<span>Hunter x Hunter</span> Database <span>API</span>
 					</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -42,7 +47,8 @@ export default function Home({ characters }) {
 			</section>
 
 			<section className="characters">
-				<h2 className="mb-2 heading__2">Main Characters</h2>
+				<h3 className="heading__3 mb-1">Characters</h3>
+
 				<div className="card-list">
 					{characters.map((item) => (
 						<div className="card" key={item._id}>
@@ -54,11 +60,42 @@ export default function Home({ characters }) {
 								/>
 							</div>
 							<div className="card__content">
-								<h4>{item.name}</h4>
-								<h4>{item.nen_type[0]}</h4>
+								{item.also_known_as.length ? (
+									<h6 className="card__title">{`${item.name} (${item.also_known_as[0]})`}</h6>
+								) : (
+									<h6 className="card__title">{item.name}</h6>
+								)}
+
+								<h6 className="card__sub-title">
+									{item.nen_type.map((nen, i) =>
+										i === 0 ? nen : ", " + nen
+									)}
+								</h6>
 							</div>
 						</div>
 					))}
+				</div>
+			</section>
+			<section className="py-7">
+				<div className="api">
+					<div className="api__content">
+						<h2 className="heading__2 mb-2">
+							<span>API Key</span> No More!
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing
+							elit. Aspernatur, alias et, quisquam enim deserunt
+							nulla rem reiciendis quidem distinctio omnis
+							explicabo earum.
+						</p>
+
+						<button className="btn btn--accent mt-3">
+							Documentation
+						</button>
+					</div>
+					<div className="api__image">
+						<Api />
+					</div>
 				</div>
 			</section>
 		</main>

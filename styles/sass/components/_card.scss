@@ -26,4 +26,9 @@
 		justify-content: center;
 		align-items: flex-start;
 	}
+
+	&__title,
+	&__sub-title {
+		text-transform: capitalize;
+	}
 }

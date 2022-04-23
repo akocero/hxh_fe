@@ -1,54 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
-
-.text {
-	&-xxl {
-		font-size: 10rem;
-	}
-
-	&-xl {
-		font-size: 8rem;
-	}
-
-	&-lg {
-		font-size: 6rem;
-	}
-
-	&-md {
-		font-size: 1.8rem;
-	}
-
-	&-sm {
-		font-size: 1.6rem;
-	}
-
-	&-xs {
-		font-size: 1.4rem;
-	}
-
-	&-xxs {
-		font-size: 1rem;
-	}
-}
+// @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One:wght@300;400;500;600;700;800&display=swap");
 
 h1,
-h2,
-h3,
-h4,
-h5 {
-	font-family: "Open Sans";
-	font-weight: 400;
+h2 {
+	font-family: "Paytone One";
+	// font-weight: 400;
 }
 
 .heading {
 	&__1 {
-		font-size: 5.2rem;
-		line-height: 120%;
-		letter-spacing: 2px;
-		font-weight: 900;
-		text-shadow: $text-shadow;
+		font-size: 6.8rem;
+		line-height: 100%;
+		// letter-spacing: 2px;
+		font-weight: 400;
 		// text-shadow: $text-shadow;
+		// text-shadow: $text-shadow;
+		// text-transform: uppercase;
 
 		span {
 			color: var(--accent);
@@ -60,12 +29,15 @@ h5 {
 	}
 
 	&__2 {
-		font-weight: 700;
-		font-size: 2.6rem;
+		font-weight: 400;
+		font-size: 4.4rem;
 		// text-shadow: $text-shadow;
 		line-height: 110%;
-		margin-bottom: 0.8rem;
-		text-transform: uppercase;
+
+		span {
+			color: var(--accent);
+		}
+		// text-transform: uppercase;
 	}
 
 	&__4 {
@@ -87,4 +59,9 @@ h5 {
 		// font-family: "Cascadia Code";
 		font-weight: 400;
 	}
+}
+
+h6 {
+	font-size: 1.4rem;
+	font-weight: 400;
 }
