@@ -1,0 +1,35 @@
+footer {
+	font-size: 1.8rem;
+	padding: 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(14, 14, 14);
+
+	& > h5 > a {
+		font-size: 1.6rem;
+		font-weight: 700;
+		text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.664);
+	}
+
+	h5 > svg {
+		width: 1.8rem;
+		margin-bottom: -4px;
+		fill: var(--text-color);
+	}
+
+	hr {
+		border: 1px dashed #1a1a1a;
+		width: 20%;
+		margin: 1rem auto;
+	}
+
+	ul {
+		display: flex;
+		gap: 4rem;
+		font-size: 2.2rem;
+		a {
+			color: var(--text-color);
+		}
+	}
+}
