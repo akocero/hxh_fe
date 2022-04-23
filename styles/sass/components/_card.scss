@@ -8,7 +8,7 @@
 .card {
 	// background-color: rgb(245, 245, 245);
 	// padding: 1.2rem;
-	// border-radius: 1.6rem;
+	border-radius: 0.4rem;
 	overflow: hidden;
 
 	&__content {
@@ -18,8 +18,9 @@
 
 	&__img-container {
 		// border-radius: 1.6rem;
+		border-radius: 0.4rem;
 		overflow: hidden;
-		background-color: rgb(245, 245, 245);
+		background-color: rgb(230, 230, 230);
 		height: 24rem;
 		display: flex;
 		justify-content: center;

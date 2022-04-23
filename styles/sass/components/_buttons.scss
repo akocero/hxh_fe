@@ -1,0 +1,30 @@
+.btn {
+	padding: 0.8rem 1.8rem;
+	border: none;
+	margin-right: 1rem;
+	font-family: "Kanit";
+	font-size: 1.6rem;
+	box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.25);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+	&--accent {
+		border: 1px solid var(--accent);
+		color: white;
+		background-color: var(--accent);
+		box-shadow: 0px 5px 10px rgba(var(--rgb-accent), 0.4);
+
+		&:hover {
+			transform: translateY(-2px);
+			background-color: darken($dark-accent, 2);
+			// box-shadow: 0px 15px 20px rgba(#47ca98, 0.4) !important;
+			box-shadow: 0px 5px 20px rgba(var(--rgb-accent), 0.6);
+		}
+	}
+
+	&--default:hover {
+		transform: translateY(-2px);
+		// box-shadow: 0px 15px 20px rgba(#47ca98, 0.4) !important;
+		box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.45);
+	}
+}

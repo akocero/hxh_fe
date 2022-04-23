@@ -24,6 +24,12 @@ export default function Home({ characters }) {
 						elit. Beatae ducimus facere placeat amet aspernatur
 						voluptas iure illum dolores neque sequi?
 					</p>
+					<div className="intro__actions mt-4">
+						<button className="btn btn--accent">
+							Documentation
+						</button>
+						<button className="btn btn--default">Playground</button>
+					</div>
 				</div>
 
 				<div className="intro__image-container">
@@ -36,7 +42,7 @@ export default function Home({ characters }) {
 			</div>
 
 			<div className="character__list">
-				<h2 className="mb-2">Main Characters</h2>
+				<h2 className="mb-2 heading__2">Main Characters</h2>
 				<div className="card-list">
 					{characters.map((item) => (
 						<div className="card" key={item._id}>

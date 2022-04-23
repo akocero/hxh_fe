@@ -1,7 +1,17 @@
 .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	font-family: "Kanit";
 	font-weight: 500;
 	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	// background-color: var(--bg-color);
+	background-color: rgba(var(--rgb-bg-color), 0.7);
+	backdrop-filter: blur(8px);
+	z-index: 99999;
 
 	&__title {
 		span {
