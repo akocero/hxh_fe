@@ -1,7 +1,7 @@
 @import "abstracts/variables";
 
-@import "resets/reset";
 @import "resets/typography";
+@import "resets/reset";
 
 @import "utils/helper";
 @import "utils/media_query";
@@ -16,8 +16,18 @@
 	margin: 0 auto;
 }
 
-.grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 1rem;
+.intro__image-container {
+	// background-color: red;
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3.6rem;
+
+	&__content {
+		margin-top: -8rem;
+		max-width: 50%;
+	}
 }

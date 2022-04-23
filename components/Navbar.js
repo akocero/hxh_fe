@@ -4,7 +4,7 @@ export default function Navbar() {
 	return (
 		<header className="navbar">
 			<div className="navbar__nav">
-				<div>Hunter x Hunter</div>
+				<div>Hunter x Hunter API</div>
 
 				<ul className="navbar__nav-list">
 					{navbarItems.map((item) => (

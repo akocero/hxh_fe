@@ -1,11 +1,28 @@
+.card-list {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 1.6rem;
+	grid-row-gap: 4rem;
+}
+
 .card {
-	background-color: white;
-	padding: 1.6rem;
-	border-radius: 2rem;
+	// background-color: rgb(245, 245, 245);
+	// padding: 1.2rem;
+	// border-radius: 1.6rem;
+	overflow: hidden;
+
+	&__content {
+		// padding: 1.6rem;
+		margin-top: 1.6rem;
+	}
 
 	&__img-container {
+		// border-radius: 1.6rem;
+		overflow: hidden;
+		background-color: rgb(245, 245, 245);
+		height: 24rem;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 	}
 }
