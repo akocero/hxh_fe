@@ -14,7 +14,7 @@ export async function getStaticProps() {
 export default function Home({ characters }) {
 	return (
 		<main className="wrapper">
-			<div className="intro">
+			<section className="intro">
 				<div className="intro__content">
 					<h1 className="heading__1 mb-2">
 						THE MOST POPULAR <span>ANIME API</span>
@@ -39,9 +39,9 @@ export default function Home({ characters }) {
 						height={429}
 					/>
 				</div>
-			</div>
+			</section>
 
-			<div className="character__list">
+			<section className="characters">
 				<h2 className="mb-2 heading__2">Main Characters</h2>
 				<div className="card-list">
 					{characters.map((item) => (
@@ -60,7 +60,7 @@ export default function Home({ characters }) {
 						</div>
 					))}
 				</div>
-			</div>
+			</section>
 		</main>
 	);
 }
