@@ -1,7 +1,7 @@
-@import "sass/reset";
-@import "sass/helper";
-@import "sass/media_query";
-@import "sass/typography";
+@import "resets/reset";
+@import "utils/helper";
+@import "utils/media_query";
+@import "resets/typography";
 
 .container {
 	max-width: 1200;

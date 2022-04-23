@@ -12,7 +12,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ characters }) {
-	console.log(characters);
 	return (
 		<main>
 			<div className="heading">
