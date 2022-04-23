@@ -21,13 +21,14 @@
 .intro {
 	padding-top: 7.8rem;
 	display: flex;
+	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: center;
 	gap: 3.6rem;
-	height: 87vh;
+	height: 90vh;
 
 	&__content {
-		margin-top: -4rem;
+		// margin-top: -4rem;
 		max-width: 50%;
 	}
 }
