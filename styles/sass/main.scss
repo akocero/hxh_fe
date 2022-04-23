@@ -46,6 +46,12 @@
 		svg {
 			border-radius: 1rem;
 		}
+
+		img {
+			transform: rotateY(-180deg);
+		}
+
+		position: relative;
 	}
 	&__content {
 		max-width: 40%;

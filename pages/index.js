@@ -80,7 +80,7 @@ export default function Home({ characters }) {
 				<div className="api">
 					<div className="api__content">
 						<h2 className="heading__2 mb-2">
-							<span>API Key</span> No More!
+							Adding <span>API key</span> to your request.
 						</h2>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing
