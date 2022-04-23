@@ -55,8 +55,8 @@
 		position: relative;
 	}
 	&__content {
-		min-width: 42%;
-		max-width: 42%;
+		// min-width: 38%;
+		max-width: 38%;
 	}
 }
 
@@ -66,4 +66,11 @@
 
 .api.reverse .api__image {
 	justify-content: start;
+}
+
+.api.reverse .api__content {
+	// justify-content: start;
+	// background-color: red;
+	min-width: 45%;
+	// background-color: red;
 }

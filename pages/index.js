@@ -104,7 +104,8 @@ export default function Home({ characters }) {
 				<div className="api reverse">
 					<div className="api__content">
 						<h2 className="heading__2 mb-2">
-							Detailed <span>JSON</span> Response.
+							Detailed <span>JSON</span> <br />
+							Response.
 						</h2>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing
