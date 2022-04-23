@@ -22,7 +22,7 @@ export default function Home({ characters }) {
 
 					<h1 className="heading__1 mb-2">
 						Explore <br />
-						<span>Hunter x Hunter</span> Database <span>API</span>
+						<span>Hunter x Hunter</span> Database API
 					</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -81,6 +81,29 @@ export default function Home({ characters }) {
 					<div className="api__content">
 						<h2 className="heading__2 mb-2">
 							Adding <span>API key</span> to your request.
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing
+							elit. Aspernatur, alias et, quisquam enim deserunt
+							nulla rem reiciendis quidem distinctio omnis
+							explicabo earum.
+						</p>
+
+						<button className="btn btn--accent mt-3">
+							Documentation
+						</button>
+					</div>
+					<div className="api__image">
+						<Api />
+					</div>
+				</div>
+			</section>
+
+			<section className="py-7">
+				<div className="api reverse">
+					<div className="api__content">
+						<h2 className="heading__2 mb-2">
+							Detailed <span>JSON</span> Response.
 						</h2>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing

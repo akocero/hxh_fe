@@ -40,11 +40,12 @@
 .api {
 	display: flex;
 	align-items: center;
-	gap: 4rem;
+	gap: 5.2rem;
 	&__image {
 		transform: rotateZ(-2deg);
 		svg {
 			border-radius: 1rem;
+			width: 100%;
 		}
 
 		img {
@@ -54,6 +55,11 @@
 		position: relative;
 	}
 	&__content {
-		max-width: 40%;
+		min-width: 42%;
+		max-width: 42%;
 	}
+}
+
+.api.reverse {
+	flex-direction: row-reverse;
 }
