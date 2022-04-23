@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Api from "../public/images/api.svg";
+import Json from "../public/images/json.svg";
 export async function getStaticProps() {
 	const res = await fetch("https://hxh-api.herokuapp.com/api/characters");
 	const characters = await res.json();
@@ -108,16 +109,15 @@ export default function Home({ characters }) {
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing
 							elit. Aspernatur, alias et, quisquam enim deserunt
-							nulla rem reiciendis quidem distinctio omnis
-							explicabo earum.
+							nulla rem reiciendis.
 						</p>
 
-						<button className="btn btn--accent mt-3">
-							Documentation
+						<button className="btn btn--default mt-3">
+							Playground
 						</button>
 					</div>
 					<div className="api__image">
-						<Api />
+						<Json />
 					</div>
 				</div>
 			</section>

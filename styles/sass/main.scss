@@ -40,16 +40,16 @@
 .api {
 	display: flex;
 	align-items: center;
-	gap: 5.2rem;
 	&__image {
+		width: 100%;
+		display: flex;
+		justify-content: end;
+		// background-color: red;
 		transform: rotateZ(-2deg);
+		justify-self: end;
 		svg {
 			border-radius: 1rem;
-			width: 100%;
-		}
-
-		img {
-			transform: rotateY(-180deg);
+			// width: 100%;
 		}
 
 		position: relative;
@@ -62,4 +62,8 @@
 
 .api.reverse {
 	flex-direction: row-reverse;
+}
+
+.api.reverse .api__image {
+	justify-content: start;
 }
