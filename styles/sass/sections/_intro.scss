@@ -59,4 +59,12 @@
 		-webkit-animation: mover 2.6s infinite alternate;
 		animation: mover 2.6s infinite alternate;
 	}
+
+	@include respond(phone) {
+		&--triangle {
+			top: 90%;
+			right: unset;
+			left: 10%;
+		}
+	}
 }
