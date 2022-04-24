@@ -13,11 +13,7 @@ h2 {
 	&__1 {
 		font-size: 5.8rem;
 		line-height: 100%;
-		// letter-spacing: 2px;
 		font-weight: 400;
-		// text-shadow: $text-shadow;
-		// text-shadow: $text-shadow;
-		// text-transform: uppercase;
 
 		span {
 			color: var(--accent);
@@ -31,8 +27,8 @@ h2 {
 	&__2 {
 		font-weight: 400;
 		font-size: 3.2rem;
-		// text-shadow: $text-shadow;
 		line-height: 110%;
+		text-transform: capitalize;
 
 		span {
 			color: var(--accent);
