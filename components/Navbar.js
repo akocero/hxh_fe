@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Navbar() {
 	const navbarItems = ["#home", "#documentation", "#playground", "#about"];
-	const [close, setclose] = useState(true);
+	const [close, setclose] = useState(false);
 	const toggleNav = () => {
 		close ? setclose(false) : setclose(true);
 
