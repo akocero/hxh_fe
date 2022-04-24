@@ -14,10 +14,6 @@
 	backdrop-filter: blur(8px);
 	z-index: 99999;
 
-	@include respond(phone) {
-		display: none;
-	}
-
 	&__title {
 		span {
 			color: var(--accent);
@@ -29,14 +25,92 @@
 		display: flex;
 		max-width: $max-width;
 		margin: 0 auto;
+
+		@include respond(phone) {
+			padding: 0 2rem;
+		}
 	}
 
 	&__nav-list {
 		margin-left: auto;
 		display: flex;
 
+		@include respond(phone) {
+			display: unset;
+			margin-left: unset;
+			position: fixed;
+			top: -100vh;
+			left: 0;
+			height: 100vh;
+			z-index: 999999;
+			display: flex;
+			background-color: rgba(var(--rgb-bg-color), 0.96);
+			backdrop-filter: blur(8px);
+			width: 100%;
+			flex-direction: column;
+
+			font-size: 3.8rem;
+			justify-content: center;
+			align-items: center;
+			transition: all 1s ease;
+		}
+
 		& > * {
 			margin-left: 2.8rem;
+		}
+		&.close {
+			@include respond(phone) {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				z-index: 999999;
+				display: flex;
+				background-color: rgba(var(--rgb-bg-color), 0.96);
+				backdrop-filter: blur(8px);
+				width: 100%;
+				flex-direction: column;
+
+				font-size: 3.8rem;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+
+	&__burger {
+		margin-left: 2rem;
+		// background-color: red;
+		width: 34px;
+		height: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		display: none;
+		margin-left: auto;
+		z-index: 9999999;
+
+		span {
+			// margin: 4px 0;
+			background-color: white;
+			display: block;
+			height: 2.2px;
+			transition: all 0.3s ease;
+		}
+
+		@include respond(phone) {
+			display: flex;
+		}
+
+		&.close {
+			span:nth-child(1) {
+				transform: rotate(45deg) translate(5px, 5px);
+			}
+
+			span:nth-child(2) {
+				transform: rotate(-45deg) translate(-1px, -2px);
+			}
 		}
 	}
 }
