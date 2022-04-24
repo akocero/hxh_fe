@@ -11,6 +11,11 @@ html {
 	//10px will be our default rems so that if we decalare 5rem it will be 50px it is much easy
 	//to calculate the size of your rems or font-sizes
 	font-size: 62.5%;
+
+	@include respond(phone) {
+		// width < 900?
+		font-size: 50%; //1 rem = 8px, 8/16 = 50%
+	}
 }
 
 body {
@@ -35,4 +40,15 @@ a {
 
 img {
 	width: 100%;
+}
+
+.wrapper {
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+@include respond(phone) {
+	section {
+		padding: 0 2rem;
+	}
 }

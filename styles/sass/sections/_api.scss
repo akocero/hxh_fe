@@ -3,12 +3,20 @@
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 .api {
 	position: relative;
 	display: flex;
 	align-items: center;
+	width: 100%;
+
+	@include respond(phone) {
+		flex-direction: column-reverse;
+	}
+
 	&__image {
 		width: 100%;
 		display: flex;
@@ -16,19 +24,32 @@
 		// background-color: red;
 		transform: rotateZ(-2deg);
 		justify-self: end;
+
+		@include respond(phone) {
+			margin-left: 7rem;
+		}
+
 		svg {
 			border-radius: 1rem;
 			// width: 100%;
 		}
 
 		position: relative;
+
+		@include respond(phone) {
+		}
 	}
 	&__content {
 		// min-width: 38%;
 		max-width: 38%;
+
+		@include respond(phone) {
+			max-width: 100%;
+			padding: 4rem;
+			margin-top: 4rem;
+		}
 	}
 	.sticker {
-		// z-index: 9999;
 		&--circle {
 			top: -4%;
 			left: unset;
@@ -46,12 +67,29 @@
 			bottom: 30%;
 			left: 40%;
 		}
+
+		@include respond(phone) {
+			z-index: 9999;
+
+			&--rectangle {
+				bottom: 40%;
+				left: 10%;
+			}
+
+			&--triangle {
+				right: 5%;
+			}
+		}
 	}
 }
 
 .api.reverse {
 	position: relative;
 	flex-direction: row-reverse;
+
+	@include respond(phone) {
+		flex-direction: column-reverse;
+	}
 
 	.sticker {
 		// z-index: 9999;
@@ -69,6 +107,20 @@
 		&--rectangle {
 			bottom: 30%;
 			left: 50%;
+		}
+
+		@include respond(phone) {
+			z-index: 9999;
+
+			&--rectangle {
+				bottom: 40%;
+				left: 80%;
+			}
+
+			&--triangle {
+				right: unset;
+				left: 70%;
+			}
 		}
 	}
 }

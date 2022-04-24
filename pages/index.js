@@ -54,7 +54,7 @@ export default function Home({ characters, groups }) {
 					</div>
 				</div>
 
-				<div className="intro__image-container">
+				<div className="intro__img">
 					<Image
 						src="/images/intro_img.webp"
 						width={300}

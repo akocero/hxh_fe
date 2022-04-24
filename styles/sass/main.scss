@@ -1,11 +1,11 @@
 @import "abstracts/variables";
 @import "abstracts/animation";
 
-@import "resets/typography";
-@import "resets/reset";
-
 @import "utils/helper";
 @import "utils/media_query";
+
+@import "resets/typography";
+@import "resets/reset";
 
 @import "components/card";
 @import "components/buttons";
@@ -24,6 +24,10 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2rem;
 		row-gap: 4rem;
+
+		@include respond(phone) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
 	&__item {

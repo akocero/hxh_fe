@@ -19,9 +19,9 @@ h2 {
 			color: var(--accent);
 		}
 
-		// @include respond(phGuy) {
-		// 	font-size: 5.8rem;
-		// }
+		@include respond(phone) {
+			font-size: 4.8rem;
+		}
 	}
 
 	&__2 {

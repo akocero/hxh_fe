@@ -3,6 +3,10 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-gap: 1.6rem;
 	grid-row-gap: 4rem;
+
+	@include respond(phone) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .card {
