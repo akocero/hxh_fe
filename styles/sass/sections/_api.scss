@@ -1,0 +1,78 @@
+.api {
+	position: relative;
+	display: flex;
+	align-items: center;
+	&__image {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		// background-color: red;
+		transform: rotateZ(-2deg);
+		justify-self: end;
+		svg {
+			border-radius: 1rem;
+			// width: 100%;
+		}
+
+		position: relative;
+	}
+	&__content {
+		// min-width: 38%;
+		max-width: 38%;
+	}
+	.sticker {
+		// z-index: 9999;
+		&--circle {
+			top: -4%;
+			left: unset;
+			right: 30%;
+		}
+
+		&--triangle {
+			top: unset;
+			bottom: 5%;
+			right: -5%;
+			left: unset;
+		}
+
+		&--rectangle {
+			bottom: 30%;
+			left: 40%;
+		}
+	}
+}
+
+.api.reverse {
+	position: relative;
+	flex-direction: row-reverse;
+
+	.sticker {
+		// z-index: 9999;
+		&--circle {
+			top: -4%;
+			left: 10%;
+		}
+
+		&--triangle {
+			top: unset;
+			bottom: 5%;
+			left: -5%;
+		}
+
+		&--rectangle {
+			bottom: 30%;
+			left: 50%;
+		}
+	}
+}
+
+.api.reverse .api__image {
+	justify-content: flex-start;
+}
+
+.api.reverse .api__content {
+	// justify-content: start;
+	// background-color: red;
+	min-width: 45%;
+	// background-color: red;
+}
