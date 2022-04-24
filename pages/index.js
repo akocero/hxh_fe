@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Api from "../public/images/api.svg";
 import Json from "../public/images/json.svg";
+import StickerCircle from "../public/images/circle.svg";
+import StickerTriangle from "../public/images/triangle.svg";
+import StickerRectangle from "../public/images/rectangle.svg";
 export async function getStaticProps() {
 	const res = await fetch("https://hxh-api.herokuapp.com/api/characters");
 	const characters = await res.json();
@@ -16,6 +19,15 @@ export default function Home({ characters }) {
 	return (
 		<main className="wrapper">
 			<section className="intro">
+				<span className="sticker sticker--circle">
+					<StickerCircle />
+				</span>
+				<span className="sticker sticker--rectangle">
+					<StickerRectangle />
+				</span>
+				<span className="sticker sticker--triangle">
+					<StickerTriangle />
+				</span>
 				<div className="intro__content">
 					{/* <h1 className="heading__1 mb-2">
 						The Most Popular <span>Anime API</span>
@@ -79,6 +91,15 @@ export default function Home({ characters }) {
 			</section>
 			<section className="py-7">
 				<div className="api">
+					<span className="sticker sticker--circle">
+						<StickerCircle />
+					</span>
+					<span className="sticker sticker--rectangle">
+						<StickerRectangle />
+					</span>
+					<span className="sticker sticker--triangle">
+						<StickerTriangle />
+					</span>
 					<div className="api__content">
 						<h2 className="heading__2 mb-2">
 							Adding <span>API key</span> to your request.
@@ -102,10 +123,18 @@ export default function Home({ characters }) {
 
 			<section className="py-7">
 				<div className="api reverse">
+					<span className="sticker sticker--circle">
+						<StickerCircle />
+					</span>
+					<span className="sticker sticker--rectangle">
+						<StickerRectangle />
+					</span>
+					<span className="sticker sticker--triangle">
+						<StickerTriangle />
+					</span>
 					<div className="api__content">
 						<h2 className="heading__2 mb-2">
-							Detailed <span>JSON</span> <br />
-							Response.
+							Detailed <span>JSON</span> Response.
 						</h2>
 						<p>
 							Lorem ipsum dolor sit amet consectetur, adipisicing

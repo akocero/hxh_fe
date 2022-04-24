@@ -26,10 +26,58 @@
 	align-items: center;
 	gap: 4.2rem;
 	height: 90vh;
+	position: relative;
 
 	&__content {
 		// margin-top: -4rem;
+		position: relative;
 		max-width: 50%;
+		z-index: 99999999;
+	}
+}
+
+.sticker {
+	position: absolute;
+
+	// opacity: 0.4;
+
+	svg {
+		circle,
+		rect,
+		path {
+			stroke: var(--accent);
+			stroke-width: 1.4;
+		}
+	}
+
+	&--circle {
+		top: 20%;
+		right: 10%;
+		-webkit-animation: mover 1.8s infinite alternate;
+		animation: mover 1.8s infinite alternate;
+	}
+
+	&--triangle {
+		top: 35%;
+		left: 6%;
+		-webkit-animation: mover 2.2s infinite alternate;
+		animation: mover 2.2s infinite alternate;
+	}
+
+	&--rectangle {
+		bottom: 10%;
+		right: 20%;
+		-webkit-animation: mover 2.6s infinite alternate;
+		animation: mover 2.6s infinite alternate;
+	}
+}
+
+@keyframes mover {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-16px);
 	}
 }
 
@@ -38,12 +86,13 @@
 }
 
 .api {
+	position: relative;
 	display: flex;
 	align-items: center;
 	&__image {
 		width: 100%;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		// background-color: red;
 		transform: rotateZ(-2deg);
 		justify-self: end;
@@ -58,10 +107,50 @@
 		// min-width: 38%;
 		max-width: 38%;
 	}
+	.sticker {
+		// z-index: 9999;
+		&--circle {
+			top: -4%;
+			left: unset;
+			right: 30%;
+		}
+
+		&--triangle {
+			top: unset;
+			bottom: 5%;
+			right: -5%;
+			left: unset;
+		}
+
+		&--rectangle {
+			bottom: 30%;
+			left: 40%;
+		}
+	}
 }
 
 .api.reverse {
+	position: relative;
 	flex-direction: row-reverse;
+
+	.sticker {
+		// z-index: 9999;
+		&--circle {
+			top: -4%;
+			left: 10%;
+		}
+
+		&--triangle {
+			top: unset;
+			bottom: 5%;
+			left: -5%;
+		}
+
+		&--rectangle {
+			bottom: 30%;
+			left: 50%;
+		}
+	}
 }
 
 .api.reverse .api__image {

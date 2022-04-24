@@ -30,7 +30,7 @@ h2 {
 
 	&__2 {
 		font-weight: 400;
-		font-size: 4.2rem;
+		font-size: 3.2rem;
 		// text-shadow: $text-shadow;
 		line-height: 110%;
 
@@ -64,4 +64,8 @@ h2 {
 h6 {
 	font-size: 1.4rem;
 	font-weight: 400;
+}
+
+p {
+	opacity: 0.5;
 }

@@ -9,7 +9,7 @@ footer {
 	& > h5 > a {
 		font-size: 1.6rem;
 		font-weight: 700;
-		text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.664);
+		// text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.664);
 	}
 
 	h5 > svg {
@@ -31,5 +31,10 @@ footer {
 		a {
 			color: var(--text-color);
 		}
+	}
+
+	.creator {
+		color: #00e673;
+		text-shadow: 1px 1px 5px rgba(0, 230, 115, 0.37);
 	}
 }
