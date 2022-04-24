@@ -5,14 +5,13 @@
 	justify-content: center;
 	align-items: center;
 	gap: 4.2rem;
-	height: 90vh;
+	height: 85vh;
 	position: relative;
 
 	&__content {
 		// margin-top: -4rem;
 		position: relative;
 		max-width: 50%;
-		z-index: 99999999;
 	}
 }
 

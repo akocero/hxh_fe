@@ -89,7 +89,7 @@ export default function Home({ characters }) {
 					))}
 				</div>
 			</section>
-			<section className="py-7">
+			<section className="py-7" id="api">
 				<div className="api">
 					<span className="sticker sticker--circle">
 						<StickerCircle />
@@ -121,7 +121,7 @@ export default function Home({ characters }) {
 				</div>
 			</section>
 
-			<section className="py-7">
+			<section className="py-7" id="api-reverse">
 				<div className="api reverse">
 					<span className="sticker sticker--circle">
 						<StickerCircle />
