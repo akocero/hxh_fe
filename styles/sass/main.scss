@@ -17,3 +17,55 @@
 
 @import "layouts/navbar";
 @import "layouts/footer";
+
+.groups {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		row-gap: 4rem;
+	}
+
+	&__item {
+		// background-color: orangered;
+		text-align: center;
+
+		&--title {
+			font-size: 1.6rem;
+		}
+	}
+
+	&__content {
+		// background-color: orangered;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+	&__img {
+		height: 22rem;
+		overflow: hidden;
+		border-radius: 1rem;
+		box-shadow: 0 10px 36px 0 rgb(0, 0, 0);
+		position: relative;
+		transition: all 0.3s ease;
+
+		&::after {
+			transition: all 0.3s ease;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			content: "";
+			top: 0;
+			left: 0;
+			background-color: var(--accent);
+			opacity: 0.4;
+		}
+		&:hover {
+			transform: rotateZ(-4deg) scale(1.1);
+			z-index: 99;
+			&::after {
+				opacity: 0;
+			}
+		}
+	}
+}

@@ -8,14 +8,18 @@ export async function getStaticProps() {
 	const res = await fetch("https://hxh-api.herokuapp.com/api/characters");
 	const characters = await res.json();
 
+	const res2 = await fetch("https://hxh-api.herokuapp.com/api/groups");
+	const groups = await res2.json();
+
 	return {
 		props: {
 			characters,
+			groups,
 		},
 	};
 }
 
-export default function Home({ characters }) {
+export default function Home({ characters, groups }) {
 	return (
 		<main className="wrapper">
 			<section className="intro">
@@ -118,6 +122,35 @@ export default function Home({ characters }) {
 					<div className="api__image">
 						<Api />
 					</div>
+				</div>
+			</section>
+
+			<section className="groups">
+				<h3 className="heading__3 mb-1">Groups</h3>
+
+				<div className="groups__list">
+					{groups.map((item) => (
+						<div className="groups__item" key={item._id}>
+							<div className="groups__img">
+								<Image
+									src={item.image.secure_url}
+									width={item.image.width}
+									height={item.image.height}
+								/>
+							</div>
+							<div className="groups__content mt-2">
+								{item.also_known_as.length ? (
+									<h6 className="groups__item--title">{`${item.name} (${item.also_known_as[0]})`}</h6>
+								) : (
+									<h6 className="groups__item--title">
+										{item.name}
+									</h6>
+								)}
+
+								<h6>{item.classification}</h6>
+							</div>
+						</div>
+					))}
 				</div>
 			</section>
 

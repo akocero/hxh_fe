@@ -14,17 +14,37 @@
 	&__content {
 		// padding: 1.6rem;
 		margin-top: 1.6rem;
+		text-align: center;
 	}
 
 	&__img-container {
 		// border-radius: 1.6rem;
 		border-radius: 0.8rem;
 		overflow: hidden;
-		background-color: rgb(230, 230, 230);
+		background-color: white;
 		height: 24rem;
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
+		position: relative;
+
+		&::after {
+			transition: all 0.3s ease;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			content: "";
+			top: 0;
+			left: 0;
+			background-color: var(--accent);
+			opacity: 0.5;
+		}
+
+		&:hover {
+			&::after {
+				opacity: 0;
+			}
+		}
 	}
 
 	&__title,
