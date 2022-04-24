@@ -43,7 +43,7 @@
 	&__image {
 		width: 100%;
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 		// background-color: red;
 		transform: rotateZ(-2deg);
 		justify-self: end;
@@ -65,7 +65,7 @@
 }
 
 .api.reverse .api__image {
-	justify-content: start;
+	justify-content: flex-start;
 }
 
 .api.reverse .api__content {
