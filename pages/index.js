@@ -16,6 +16,7 @@ export async function getStaticProps() {
 			characters,
 			groups,
 		},
+		revalidate: 1,
 	};
 }
 
