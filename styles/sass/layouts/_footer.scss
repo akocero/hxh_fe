@@ -1,4 +1,4 @@
-footer {
+.footer {
 	font-size: 1.8rem;
 	padding: 4rem;
 	display: flex;
@@ -36,5 +36,11 @@ footer {
 	.creator {
 		color: #00e673;
 		text-shadow: 1px 1px 5px rgba(0, 230, 115, 0.37);
+	}
+
+	&__links {
+		svg {
+			font-size: 2.8rem;
+		}
 	}
 }

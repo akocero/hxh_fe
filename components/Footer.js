@@ -3,7 +3,7 @@ import { FiGithub, FiLinkedin, FiTwitter, FiGitlab } from "react-icons/fi";
 
 export default function Footer() {
 	return (
-		<footer>
+		<footer className="footer">
 			<h5>
 				Find an issue with this page?{" "}
 				<Link href="https://github.com/akocero/node_hxh_api">
@@ -30,7 +30,7 @@ export default function Footer() {
 				</Link>
 			</h5>
 			<hr />
-			<ul>
+			<ul className="footer__links">
 				<li>
 					<Link href="https://github.com/akocero/hxh_fe">
 						<a>
