@@ -1,22 +1,36 @@
-import Image from "next/image";
-import Api from "../public/images/api.svg";
-import Json from "../public/images/json.svg";
-import StickerCircle from "../public/images/circle.svg";
-import StickerTriangle from "../public/images/triangle.svg";
-import StickerRectangle from "../public/images/rectangle.svg";
+import Image from 'next/image';
+import Api from '../public/images/api.svg';
+import Json from '../public/images/json.svg';
+import StickerCircle from '../public/images/circle.svg';
+import StickerTriangle from '../public/images/triangle.svg';
+import StickerRectangle from '../public/images/rectangle.svg';
 export async function getStaticProps() {
-	const res = await fetch("https://hxh-api.herokuapp.com/api/characters");
+	const obj = {
+		method: 'GET',
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+			Authorization: `Bearer ${process.env.HXH_API_KEY}`
+		}
+	};
+
+	const res = await fetch(
+		'https://hxh-api.herokuapp.com/api/v1/characters',
+		obj
+	);
 	const characters = await res.json();
 
-	const res2 = await fetch("https://hxh-api.herokuapp.com/api/groups");
+	const res2 = await fetch(
+		'https://hxh-api.herokuapp.com/api/v1/groups',
+		obj
+	);
 	const groups = await res2.json();
-
 	return {
 		props: {
-			characters,
-			groups,
+			characters: characters.data,
+			groups: groups.data
 		},
-		revalidate: 1,
+		revalidate: 1
 	};
 }
 
@@ -68,30 +82,36 @@ export default function Home({ characters, groups }) {
 				<h3 className="heading__3 mb-1">Characters</h3>
 
 				<div className="card-list">
-					{characters.map((item) => (
-						<div className="card" key={item._id}>
-							<div className="card__img-container">
-								<Image
-									src={item.image.secure_url}
-									width={item.image.width}
-									height={item.image.height}
-								/>
-							</div>
-							<div className="card__content">
-								{item.also_known_as.length ? (
-									<h6 className="card__title">{`${item.name} (${item.also_known_as[0]})`}</h6>
-								) : (
-									<h6 className="card__title">{item.name}</h6>
-								)}
+					{characters?.length &&
+						characters.map((item) => {
+							if (item.image)
+								return (
+									<div className="card" key={item._id}>
+										<div className="card__img-container">
+											<Image
+												src={item.image.secure_url}
+												width={item.image.width}
+												height={item.image.height}
+											/>
+										</div>
+										<div className="card__content">
+											{item.also_known_as.length ? (
+												<h6 className="card__title">{`${item.name} (${item.also_known_as[0]})`}</h6>
+											) : (
+												<h6 className="card__title">
+													{item.name}
+												</h6>
+											)}
 
-								<h6 className="card__sub-title">
-									{item.nen_type.map((nen, i) =>
-										i === 0 ? nen : ", " + nen
-									)}
-								</h6>
-							</div>
-						</div>
-					))}
+											<h6 className="card__sub-title">
+												{item.nen_type.map((nen, i) =>
+													i === 0 ? nen : ', ' + nen
+												)}
+											</h6>
+										</div>
+									</div>
+								);
+						})}
 				</div>
 			</section>
 			<section className="py-7" id="api">
@@ -130,28 +150,29 @@ export default function Home({ characters, groups }) {
 				<h3 className="heading__3 mb-1">Groups</h3>
 
 				<div className="groups__list">
-					{groups.map((item) => (
-						<div className="groups__item" key={item._id}>
-							<div className="groups__img">
-								<Image
-									src={item.image.secure_url}
-									width={item.image.width}
-									height={item.image.height}
-								/>
-							</div>
-							<div className="groups__content mt-2">
-								{item.also_known_as.length ? (
-									<h6 className="groups__item--title">{`${item.name} (${item.also_known_as[0]})`}</h6>
-								) : (
-									<h6 className="groups__item--title">
-										{item.name}
-									</h6>
-								)}
+					{groups?.length &&
+						groups.map((item) => (
+							<div className="groups__item" key={item._id}>
+								<div className="groups__img">
+									<Image
+										src={item.image.secure_url}
+										width={item.image.width}
+										height={item.image.height}
+									/>
+								</div>
+								<div className="groups__content mt-2">
+									{item.also_known_as.length ? (
+										<h6 className="groups__item--title">{`${item.name} (${item.also_known_as[0]})`}</h6>
+									) : (
+										<h6 className="groups__item--title">
+											{item.name}
+										</h6>
+									)}
 
-								<h6>{item.classification}</h6>
+									<h6>{item.classification}</h6>
+								</div>
 							</div>
-						</div>
-					))}
+						))}
 				</div>
 			</section>
 
