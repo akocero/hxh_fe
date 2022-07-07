@@ -1,27 +1,17 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import Head from "next/head";
+import Navbar from './Navbar';
+import Footer from './Footer';
+import Head from 'next/head';
 
 export default function Layout({ children }) {
 	return (
 		<div>
 			<Head>
-				<title>@eugenebadato</title>
-				<meta
-					property="og:url"
-					content="https://eugenebadato.vercel.app/"
-				/>
+				<title>HxH | Open Source API</title>
+				<meta property="og:url" content="https://hxh-api.vercel.app/" />
 				<meta property="og:type" content="website" />
-				<meta
-					property="og:title"
-					content="Eugene Paul Badato | Website Portfolio"
-				/>
+				<meta property="og:title" content="Hxh API" />
 				<meta name="twitter:card" content="summary" />
-				<meta
-					property="og:description"
-					content="I design and develop things for the web."
-				/>
-				<meta property="og:image" content="/images/portfolio-ss.png" />
+				<meta property="og:description" content="Open Source API" />
 			</Head>
 			<Navbar />
 
