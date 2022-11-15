@@ -15,13 +15,13 @@ export async function getStaticProps() {
 	};
 
 	const res = await fetch(
-		'https://hxh-api.herokuapp.com/api/v1/characters?sort=createdAt&limit=10',
+		process.env.HXH_BASE_URL + '/api/v1/characters?sort=createdAt&limit=10',
 		obj
 	);
 	const characters = await res.json();
 
 	const res2 = await fetch(
-		'https://hxh-api.herokuapp.com/api/v1/groups?sort=createdAt&limit=10',
+		process.env.HXH_BASE_URL + '/api/v1/groups?sort=createdAt&limit=10',
 		obj
 	);
 	const groups = await res2.json();
