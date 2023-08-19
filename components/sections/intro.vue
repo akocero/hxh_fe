@@ -22,7 +22,7 @@
 					Documentation
 				</a>
 				<NuxtLink
-					to="https://github.com/akocero/hxh_api_docs"
+					to="/"
 					class="rounded-lg font-semibold bg-red-600 text-gray-50 px-8 py-3 hover:bg-red-500">
 					Playground
 				</NuxtLink>

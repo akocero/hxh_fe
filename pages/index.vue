@@ -2,13 +2,20 @@
 	<div>
 		<SectionsIntro />
 		<SectionsCharacters :characters="characters" />
-		<SectionsHero :details="api_key_hero" />
+		<SectionsHero
+			:details="api_key_hero"
+			@clickCTA="AppStore.toggleRegistrationForm" />
 		<SectionsGroups :groups="groups" />
 		<SectionsHero :details="json_hero" />
 	</div>
 </template>
 
 <script setup>
+import { useAppStore } from '@/stores/appStore';
+useHead({
+	title: 'HxH API | Open Source API'
+});
+const AppStore = useAppStore();
 const characters = ref([]);
 const groups = ref([]);
 const api_key_hero = ref({
@@ -20,7 +27,6 @@ const api_key_hero = ref({
 					accessing the API becomes a seamless and effortless
 					experience.`,
 	button: {
-		link: 'https://github.com/akocero/hxh_api_docs',
 		label: 'Generate Api key'
 	},
 	is_reverse: false
@@ -35,7 +41,7 @@ const json_hero = ref({
 					data, offering comprehensive insights for your needs.`,
 	button: {
 		link: 'https://github.com/akocero/hxh_api_docs',
-		label: 'Playground'
+		label: 'Documentation'
 	},
 	is_reverse: true
 });
