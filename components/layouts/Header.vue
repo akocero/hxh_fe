@@ -7,8 +7,14 @@
 			</div>
 			<ul class="flex space-x-5 items-center">
 				<li><NuxtLink to="/">Home</NuxtLink></li>
-				<li><NuxtLink to="/about">Docs</NuxtLink></li>
-				<li><NuxtLink to="/characters">Playground</NuxtLink></li>
+				<li>
+					<a
+						href="https://github.com/akocero/hxh_api_docs"
+						target="_blank">
+						Docs
+					</a>
+				</li>
+				<li><NuxtLink to="/">Playground</NuxtLink></li>
 				<li>
 					<button
 						@click="AppStore.toggleRegistrationForm"

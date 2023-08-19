@@ -21,6 +21,13 @@
 						class="rounded-lg font-semibold bg-gray-800 text-gray-50 px-8 py-3 hover:bg-gray-700">
 						{{ details.button.label }}
 					</a>
+
+					<button
+						v-else
+						@click="$emit('clickCTA')"
+						class="rounded-lg font-semibold bg-gray-800 text-gray-50 px-8 py-3 hover:bg-gray-700">
+						{{ details.button.label }}
+					</button>
 				</div>
 			</div>
 		</div>
