@@ -15,6 +15,18 @@ import { useAppStore } from '@/stores/appStore';
 useHead({
 	title: 'HxH API | Open Source API'
 });
+useSeoMeta({
+	title: 'Hunter x Hunter Database API',
+	ogTitle: 'Hunter x Hunter Database API',
+	description: `Welcome to the Hunter X Hunter API! This guide is your key to
+				exploring the world of HTTP requests in the Hunter X Hunter
+				universe. Before you embark on your data-gathering quest.`,
+	ogDescription: `Welcome to the Hunter X Hunter API! This guide is your key to
+				exploring the world of HTTP requests in the Hunter X Hunter
+				universe. Before you embark on your data-gathering quest.`,
+	ogImage: '/img/og_img.png',
+	twitterCard: 'summary_large_image'
+});
 const AppStore = useAppStore();
 const characters = ref([]);
 const groups = ref([]);
