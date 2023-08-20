@@ -1,20 +1,20 @@
 <template>
 	<div>
 		<SectionsIntro />
-		<SectionsCharacters :characters="characters" />
-		<SectionsHero
-			:details="api_key_hero"
-			@clickCTA="AppStore.toggleRegistrationForm" />
-		<SectionsGroups :groups="groups" />
+		<SectionsCharacters :characters="characters?.data || []" />
+		<SectionsHero :details="api_key_hero" />
+		<SectionsGroups :groups="groups?.data || []" />
 		<SectionsHero :details="json_hero" />
 	</div>
 </template>
 
 <script setup>
 import { useAppStore } from '@/stores/appStore';
+
 useHead({
 	title: 'HxH API | Open Source API'
 });
+
 useSeoMeta({
 	title: 'Hunter x Hunter Database API',
 	ogTitle: 'Hunter x Hunter Database API',
@@ -27,9 +27,8 @@ useSeoMeta({
 	ogImage: '/img/og_img.png',
 	twitterCard: 'summary_large_image'
 });
+
 const AppStore = useAppStore();
-const characters = ref([]);
-const groups = ref([]);
 const api_key_hero = ref({
 	image: '/img/api_img.svg',
 	title: `Adding
@@ -39,7 +38,10 @@ const api_key_hero = ref({
 					accessing the API becomes a seamless and effortless
 					experience.`,
 	button: {
-		label: 'Generate Api key'
+		label: 'Generate Api key',
+		fn: () => {
+			AppStore.toggleRegistrationForm();
+		}
 	},
 	is_reverse: false
 });
@@ -52,8 +54,10 @@ const json_hero = ref({
 	sub_title: `The JSON response provides an intricately detailed set of
 					data, offering comprehensive insights for your needs.`,
 	button: {
-		link: 'https://github.com/akocero/hxh_api_docs',
-		label: 'Documentation'
+		label: 'Documentation',
+		fn: () => {
+			window.open('https://github.com/akocero/hxh_api_docs', '_blank');
+		}
 	},
 	is_reverse: true
 });
@@ -66,11 +70,9 @@ const fetchData = async (endpoint) => {
 	}`;
 	const { data } = await useFetch(url);
 
-	return data.value?.data;
+	return data;
 };
 
-characters.value = await fetchData('/characters');
-groups.value = await fetchData('/groups');
+const characters = await fetchData('/characters');
+const groups = await fetchData('/groups');
 </script>
-
-<style lang="scss" scoped></style>

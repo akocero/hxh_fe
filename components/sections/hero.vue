@@ -14,17 +14,8 @@
 					{{ details.sub_title }}
 				</p>
 				<div class="mt-10 h-10 flex items-end">
-					<a
-						v-if="details.button.link"
-						:href="details.button.link"
-						target="_blank"
-						class="rounded-lg font-semibold bg-gray-800 text-gray-50 px-8 py-3 hover:bg-gray-700">
-						{{ details.button.label }}
-					</a>
-
 					<button
-						v-else
-						@click="$emit('clickCTA')"
+						@click="details.button.fn"
 						class="rounded-lg font-semibold bg-gray-800 text-gray-50 px-8 py-3 hover:bg-gray-700">
 						{{ details.button.label }}
 					</button>
