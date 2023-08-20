@@ -1,10 +1,12 @@
 <template>
-	<section class="my-40">
+	<section class="md:my-40 my-20">
 		<div>
 			<h2 class="text-3xl mb-6 font-sans font-extrabold">CHARACTERS</h2>
 		</div>
 		<div class="grid grid-cols-10 gap-x-5 gap-y-8">
-			<div v-for="chr in characters" class="group col-span-2">
+			<div
+				v-for="chr in characters"
+				class="group md:col-span-2 col-span-5">
 				<div
 					class="bg-white max-h-64 overflow-y-hidden rounded-xl group-hover:scale-105 group-hover:rotate-3 transition-all">
 					<img
