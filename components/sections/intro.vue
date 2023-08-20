@@ -1,10 +1,12 @@
 <template>
 	<section class="flex justify-center gap-10 my-16">
-		<div>
+		<div class="hidden md:block">
 			<img src="/img/intro_img.webp" alt="" />
 		</div>
-		<div class="max-w-2xl flex flex-col justify-center">
-			<h1 class="text-6xl font-sans font-extrabold mb-4 uppercase">
+		<div
+			class="max-w-2xl flex flex-col justify-center text-center md:text-left">
+			<h1
+				class="text-4xl md:text-6xl font-sans font-extrabold mb-4 uppercase">
 				<span class="text-primary">Hunter x Hunter</span>
 				<br />
 				Database API
@@ -14,7 +16,8 @@
 				exploring the world of HTTP requests in the Hunter X Hunter
 				universe. Before you embark on your data-gathering quest.
 			</p>
-			<div class="h-10 flex items-center space-x-4 mt-10">
+			<div
+				class="h-10 flex items-center space-x-4 mt-10 justify-center md:justify-start">
 				<a
 					href="https://github.com/akocero/hxh_api_docs"
 					target="_blank"

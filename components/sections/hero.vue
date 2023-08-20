@@ -1,9 +1,11 @@
 <template>
-	<section class="max-w-screen-xl mx-auto my-72" v-if="details">
+	<section
+		class="max-w-screen-xl mx-auto md:my-56 my-32 px-2 md:px-0"
+		v-if="details">
 		<div
-			class="flex justify-between items-center"
+			class="flex md:flex-row flex-col justify-between items-center"
 			:class="details.is_reverse && 'flex-row-reverse'">
-			<div>
+			<div class="mb-10">
 				<img :src="details.image" alt="" class="rounded-xl -rotate-3" />
 			</div>
 			<div class="max-w-lg">
