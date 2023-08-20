@@ -15,7 +15,7 @@
 						class="object-cover mx-auto" />
 				</div>
 
-				<div class="text-center mt-4 capitalize">
+				<div class="text-sm md:text-base text-center mt-4 capitalize">
 					<h3>
 						{{ chr.name }}
 						<span v-if="chr.also_known_as[0]">

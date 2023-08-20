@@ -10,7 +10,7 @@
 			</div>
 			<div class="max-w-lg">
 				<h2
-					class="text-4xl font-sans mb-4 font-extrabold uppercase"
+					class="text-2xl md:text-4xl font-sans mb-4 font-extrabold uppercase"
 					v-html="details.title"></h2>
 				<p class="text-gray-400">
 					{{ details.sub_title }}

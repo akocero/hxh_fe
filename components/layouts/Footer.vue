@@ -1,5 +1,6 @@
 <template>
-	<footer class="py-10 text-center font-inter bg-[#0E0E0E]">
+	<footer
+		class="py-10 text-center text-sm md:text-base font-inter bg-[#0E0E0E]">
 		<h5>
 			Find an issue with this page?
 			<NuxtLink
@@ -10,7 +11,7 @@
 			</NuxtLink>
 		</h5>
 		<hr
-			class="border-dashed max-w-[20%] mx-auto my-4 border-[1px] border-[#333333]" />
+			class="border-dashed max-w-[50%] md:max-w-[20%] mx-auto my-4 border-[1px] border-[#333333]" />
 		<h5 class="mb-1">Copyright © 2021 HxH API</h5>
 		<div class="flex justify-center">
 			Created with &nbsp;
@@ -32,7 +33,7 @@
 			</NuxtLink>
 		</div>
 		<hr
-			class="border-dashed max-w-[20%] mx-auto my-4 border-[1px] border-[#333333]" />
+			class="border-dashed max-w-[50%] md:max-w-[20%] mx-auto my-4 border-[1px] border-[#333333]" />
 		<ul class="flex justify-center space-x-9">
 			<li>
 				<NuxtLink to="https://github.com/akocero/hxh_fe">
