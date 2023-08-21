@@ -1,12 +1,13 @@
 <template>
 	<section class="pt-20 md:pt-20 text-sm md:text-base" id="playground">
 		<div>
-			<h2 class="text-3xl mb-6 font-sans font-extrabold drop-shadow">
+			<h2
+				class="text-3xl mb-6 font-sans font-extrabold drop-shadow text-center">
 				PLAYGROUND
 			</h2>
 		</div>
 		<div
-			class="md:flex items-start justify-start"
+			class="md:flex items-start justify-center w-full"
 			@submit.prevent="handleExecute">
 			<form
 				action=""
@@ -50,9 +51,8 @@
 			</div>
 			<div
 				class="md:w-[60%] mt-10 md:mt-0 text-sm md:text-base shadow-xl"
-				v-if="!store.is_loading">
+				v-if="store.response || store.error">
 				<div
-					v-if="store.response || store.error"
 					class="overflow-auto max-h-[28rem] w-full bg-dark_light rounded-lg">
 					<pre
 						class=""
