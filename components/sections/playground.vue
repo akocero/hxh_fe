@@ -45,7 +45,7 @@
 					</button>
 				</div>
 			</form>
-			<div class="md:w-[2%]"></div>
+			<div class="md:w-[2%]" v-if="store.response || store.error"></div>
 			<div class="md:w-[60%]" v-if="store.is_loading">
 				<Spinner />
 			</div>
