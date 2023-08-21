@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-import { useCharacterStore } from '@/stores/characterStore';
+import { useCharacterStore } from 'stores/playgroundStorejs';
 definePageMeta({
 	layout: 'characters'
 });

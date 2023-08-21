@@ -7,7 +7,7 @@
 			class="max-w-2xl flex flex-col justify-center text-center md:text-left">
 			<h1
 				class="text-4xl md:text-6xl font-sans font-extrabold mb-4 uppercase">
-				<span class="text-primary">Hunter x Hunter</span>
+				<span class="text-primary drop-shadow">Hunter x Hunter</span>
 				<br />
 				Database API
 			</h1>
@@ -24,11 +24,11 @@
 					class="rounded-lg font-semibold bg-gray-800 text-gray-50 px-8 py-3 hover:bg-gray-700">
 					Documentation
 				</a>
-				<NuxtLink
-					to="/"
+				<a
+					href="#playground"
 					class="rounded-lg font-semibold bg-red-600 text-gray-50 px-8 py-3 hover:bg-red-500">
 					Playground
-				</NuxtLink>
+				</a>
 			</div>
 		</div>
 	</section>

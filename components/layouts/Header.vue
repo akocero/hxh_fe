@@ -14,7 +14,7 @@
 						Docs
 					</a>
 				</li>
-				<li><NuxtLink to="/">Playground</NuxtLink></li>
+				<li><a href="#playground">Playground</a></li>
 				<li>
 					<button
 						@click="AppStore.toggleRegistrationForm"

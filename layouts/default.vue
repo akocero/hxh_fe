@@ -2,7 +2,7 @@
 	<FormsRegister />
 	<div class="bg-dark font-sans">
 		<LayoutsHeader />
-		<main class="wrapper md:px-10 px-4">
+		<main class="wrapper md:px-10 px-4 scroll-smooth">
 			<slot />
 		</main>
 		<LayoutsFooter />

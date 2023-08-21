@@ -3,8 +3,8 @@
 		class="max-w-screen-xl mx-auto md:my-56 my-32 px-2 md:px-0"
 		v-if="details">
 		<div
-			class="flex md:flex-row flex-col justify-between items-center"
-			:class="details.is_reverse && 'flex-row-reverse'">
+			class="flex flex-col md:flex-row justify-between items-center"
+			:class="[details.is_reverse && 'md:flex-row-reverse']">
 			<div class="mb-10">
 				<img :src="details.image" alt="" class="rounded-xl -rotate-3" />
 			</div>

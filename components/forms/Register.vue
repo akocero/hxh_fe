@@ -2,7 +2,10 @@
 	<Modal
 		:is_open="AppStore.is_registration_open"
 		v-if="AppStore.is_registration_open">
-		<form action="" class="p-8 space-y-6" @submit.prevent="handleRegister">
+		<form
+			action=""
+			class="p-5 md:p-8 space-y-6"
+			@submit.prevent="handleRegister">
 			<BaseAlert v-if="alert_option" :option="alert_option" />
 			<div>
 				<h3 class="text-xl">Register for API Key</h3>
