@@ -3,6 +3,7 @@
 		<SectionsIntro />
 		<SectionsCharacters :characters="characters?.data || []" />
 		<SectionsHero :details="api_key_hero" />
+		<SectionsPlayground />
 		<SectionsGroups :groups="groups?.data || []" />
 		<SectionsHero :details="json_hero" />
 	</div>
