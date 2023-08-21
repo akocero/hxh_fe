@@ -1,14 +1,16 @@
 <template>
 	<section class="pt-20 md:pt-20 text-sm md:text-base" id="playground">
 		<div>
-			<h2 class="text-3xl mb-6 font-sans font-extrabold">PLAYGROUND</h2>
+			<h2 class="text-3xl mb-6 font-sans font-extrabold drop-shadow">
+				PLAYGROUND
+			</h2>
 		</div>
 		<div
 			class="md:flex items-start justify-start"
 			@submit.prevent="handleExecute">
 			<form
 				action=""
-				class="space-y-6 bg-dark_light p-5 md:p-8 md:w-[38%] rounded-lg">
+				class="space-y-6 bg-dark_light p-5 md:p-8 md:w-[38%] rounded-lg shadow-xl">
 				<BaseAlert v-if="alert_option" :option="alert_option" />
 				<div>
 					<h3 class="">
@@ -47,7 +49,7 @@
 				<Spinner />
 			</div>
 			<div
-				class="md:w-[60%] mt-10 md:mt-0 text-sm md:text-base"
+				class="md:w-[60%] mt-10 md:mt-0 text-sm md:text-base shadow-xl"
 				v-if="!store.is_loading">
 				<div
 					v-if="store.response || store.error"
