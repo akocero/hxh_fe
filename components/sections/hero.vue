@@ -6,11 +6,14 @@
 			class="flex flex-col md:flex-row justify-between items-center"
 			:class="[details.is_reverse && 'md:flex-row-reverse']">
 			<div class="mb-10">
-				<img :src="details.image" alt="" class="rounded-xl -rotate-3" />
+				<img
+					:src="details.image"
+					alt=""
+					class="rounded-xl -rotate-3 shadow-xl" />
 			</div>
 			<div class="max-w-lg">
 				<h2
-					class="text-2xl md:text-4xl font-sans mb-4 font-extrabold uppercase"
+					class="text-2xl md:text-4xl font-sans mb-4 font-extrabold uppercase drop-shadow"
 					v-html="details.title"></h2>
 				<p class="text-gray-400">
 					{{ details.sub_title }}
