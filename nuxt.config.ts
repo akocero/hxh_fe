@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 	modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-icon'],
 	routeRules: {
 		// Homepage pre-rendered at build time
-		'/': { prerender: true }
+		'/': { prerender: true },
+		'/chracters/**': { swr: 3600 }
 	}
 });
