@@ -13,7 +13,7 @@
 import { useAppStore } from '@/stores/appStore';
 
 useHead({
-	title: 'HxH API | Open Source API'
+	title: 'HXH API | Open Source API'
 });
 
 useSeoMeta({
