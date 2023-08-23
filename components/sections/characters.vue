@@ -12,7 +12,13 @@
 				<div
 					class="bg-white max-h-64 overflow-y-hidden rounded-xl group-hover:scale-105 group-hover:rotate-3 transition-all">
 					<img
+						v-if="chr.image.length"
 						:src="chr.image[0].secure_url"
+						alt=""
+						class="object-cover mx-auto" />
+					<img
+						v-else
+						src="https://placehold.co/400x600"
 						alt=""
 						class="object-cover mx-auto" />
 				</div>
