@@ -6,6 +6,6 @@ export default defineNuxtConfig({
 		// Homepage pre-rendered at build time
 		'/': { prerender: true },
 		'/characters/**': { swr: 30 },
-		'/characters': { swr: 30 }
+		'/characters': { isr: 10 }
 	}
 });
