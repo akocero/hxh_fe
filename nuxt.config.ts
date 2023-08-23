@@ -5,6 +5,6 @@ export default defineNuxtConfig({
 	routeRules: {
 		// Homepage pre-rendered at build time
 		'/': { prerender: true },
-		'/chracters/**': { swr: 3600 }
+		'/characters/**': { swr: 30 }
 	}
 });
