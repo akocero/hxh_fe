@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hxh-fe",
+  "main": "./.output/server/index.mjs",
+  "compatibility_date": "2026-08-28",
+  "site": {
+    "bucket": "./.output/public"
+  }
+}
