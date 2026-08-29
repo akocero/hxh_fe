@@ -8,11 +8,8 @@ export default defineNuxtConfig({
 			hxhApiKey: '',
 		}
 	},
-	nitro: {
-		preset: 'cloudflare-pages'
-	},
 	routeRules: {
-		'/': { isr: 3600 },
-		'/characters': { isr: 10 }
+		'/': { prerender: true },
+		'/characters': { prerender: true }
 	}
 });
