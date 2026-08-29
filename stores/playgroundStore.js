@@ -12,9 +12,8 @@ export const usePlaygroundStore = defineStore('playground', {
 				this.response = null;
 				this.is_loading = true;
 				this.error = null;
-				const { public: { hxhBaseUrl } } = useRuntimeConfig();
 				const res = await $fetch(
-					`${hxhBaseUrl}${endpoint}?api_key=${api_key}`
+					`${import.meta.env.VITE_HXH_BASE_URL}${endpoint}?api_key=${api_key}`
 				);
 				this.is_loading = false;
 				this.response = res;
