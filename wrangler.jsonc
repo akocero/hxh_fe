@@ -3,8 +3,7 @@
   "name": "hxh-fe",
   "main": "./.output/server/index.mjs",
   "compatibility_date": "2026-08-28",
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "./.output/public/"
+  "site": {
+    "bucket": "./.output/public"
   }
 }
