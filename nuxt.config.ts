@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 		}
 	},
 	nitro: {
-		preset: 'cloudflare-module'
+		preset: 'cloudflare-pages'
 	},
 	routeRules: {
 		'/': { prerender: true },
