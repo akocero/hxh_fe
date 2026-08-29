@@ -1,25 +1,28 @@
 <template>
 	<div>
-		<div v-for="chr in characters.data">
+		<pre>URL: {{ `${$config.public.hxhBaseUrl}/characters` }}</pre>
+		<pre>data: {{ characters }}</pre>
+		<pre>error: {{ error }}</pre>
+		<div v-for="chr in characters?.data">
 			{{ chr.name }}
 		</div>
 	</div>
 </template>
 
 <script setup>
-const fetchData = async (endpoint) => {
-	const url = `${
-		import.meta.env.VITE_HXH_BASE_URL
-	}/api/v1${endpoint}?sort=createdAt&limit=20&api_key=${
-		import.meta.env.VITE_HXH_API_KEY
-	}`;
-	const { data } = await useFetch(url);
+const config = useRuntimeConfig();
 
-	return data;
-};
+const url = `${config.public.hxhBaseUrl}/characters`;
+console.log('Fetching URL:', url);
+console.log('API key:', config.public.hxhApiKey);
 
-const characters = await fetchData('/characters');
-// const groups = await fetchData('/groups');
+const { data: characters, error } = await useFetch(url, {
+	query: { sort: 'createdAt', limit: 20 },
+	headers: { 'x-api-key': config.public.hxhApiKey },
+});
+
+console.log('characters:', characters.value);
+console.log('error:', error.value);
 </script>
 
 <style scoped></style>

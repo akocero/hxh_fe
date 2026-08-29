@@ -15,7 +15,7 @@ export const usePlaygroundStore = defineStore('playground', {
 				const res = await $fetch(
 					`${
 						import.meta.env.VITE_HXH_BASE_URL
-					}/api/v1${endpoint}?api_key=${api_key}`
+					}${endpoint}?api_key=${api_key}`
 				);
 				this.is_loading = false;
 				this.response = res;
