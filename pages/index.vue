@@ -66,6 +66,7 @@ const json_hero = ref({
 const config = useRuntimeConfig();
 
 const { data: characters } = await useFetch(`${config.public.hxhBaseUrl}/characters`, {
+	key: 'characters-list',
 	query: { sort: 'createdAt', limit: 20 },
 	headers: { 'x-api-key': config.public.hxhApiKey },
 });

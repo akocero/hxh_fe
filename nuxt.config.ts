@@ -13,6 +13,6 @@ export default defineNuxtConfig({
 	},
 	routeRules: {
 		'/': { isr: 3600 },
-		'/characters': { isr: 10 }
+		'/characters': { isr: 3600 }
 	}
 });
