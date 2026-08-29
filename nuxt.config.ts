@@ -4,12 +4,14 @@ export default defineNuxtConfig({
 	modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-icon'],
 	runtimeConfig: {
 		public: {
-			hxhBaseUrl: process.env.VITE_HXH_BASE_URL,
-			hxhApiKey: process.env.VITE_HXH_API_KEY,
+			hxhBaseUrl: '',
+			hxhApiKey: '',
 		}
 	},
+	nitro: {
+		preset: 'cloudflare-module'
+	},
 	routeRules: {
-		// Homepage pre-rendered at build time
 		'/': { prerender: true },
 		'/characters': { isr: 10 }
 	}
