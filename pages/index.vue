@@ -63,17 +63,15 @@ const json_hero = ref({
 	is_reverse: true
 });
 
-const fetchData = async (endpoint) => {
-	const url = `${
-		import.meta.env.VITE_HXH_BASE_URL
-	}/api/v1${endpoint}?sort=createdAt&limit=20&api_key=${
-		import.meta.env.VITE_HXH_API_KEY
-	}`;
-	const { data } = await useFetch(url);
+const config = useRuntimeConfig();
 
-	return data;
-};
+const { data: characters } = await useFetch(`${config.public.hxhBaseUrl}/characters`, {
+	query: { sort: 'createdAt', limit: 20 },
+	headers: { 'x-api-key': config.public.hxhApiKey },
+});
 
-const characters = await fetchData('/characters');
-const groups = await fetchData('/groups');
+const { data: groups } = await useFetch(`${config.public.hxhBaseUrl}/groups`, {
+	query: { sort: 'createdAt', limit: 20 },
+	headers: { 'x-api-key': config.public.hxhApiKey },
+});
 </script>

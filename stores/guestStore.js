@@ -13,7 +13,7 @@ export const useGuestStore = defineStore('guest', {
 				const res = await $fetch(
 					`${
 						import.meta.env.VITE_HXH_BASE_URL
-					}/api/v1/guest/register`,
+					}/guest/register`,
 					{
 						method: 'post',
 						body: JSON.stringify(body)
