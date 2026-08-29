@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 		preset: 'cloudflare-module'
 	},
 	routeRules: {
-		'/': { prerender: true },
+		'/': { isr: 3600 },
 		'/characters': { isr: 10 }
 	}
 });
