@@ -4,8 +4,8 @@ export default defineNuxtConfig({
 	modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-icon'],
 	runtimeConfig: {
 		public: {
-			hxhBaseUrl: '',
-			hxhApiKey: '',
+			hxhBaseUrl: process.env.NUXT_PUBLIC_HXH_BASE_URL || '',
+			hxhApiKey: process.env.NUXT_PUBLIC_HXH_API_KEY || '',
 		}
 	},
 	routeRules: {
