@@ -10,10 +10,9 @@ export const useGuestStore = defineStore('guest', {
 			try {
 				this.is_loading = true;
 				this.error = null;
+				const { public: { hxhBaseUrl } } = useRuntimeConfig();
 				const res = await $fetch(
-					`${
-						import.meta.env.VITE_HXH_BASE_URL
-					}/guest/register`,
+					`${hxhBaseUrl}/guest/register`,
 					{
 						method: 'post',
 						body: JSON.stringify(body)
