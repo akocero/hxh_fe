@@ -63,8 +63,10 @@ const json_hero = ref({
 	is_reverse: true
 });
 
-console.log('[ENV] VITE_HXH_BASE_URL:', import.meta.env.VITE_HXH_BASE_URL);
-console.log('[ENV] VITE_HXH_API_KEY:', import.meta.env.VITE_HXH_API_KEY);
+onMounted(() => {
+	console.log('[ENV] VITE_HXH_BASE_URL:', import.meta.env.VITE_HXH_BASE_URL);
+	console.log('[ENV] VITE_HXH_API_KEY:', import.meta.env.VITE_HXH_API_KEY);
+});
 
 const { data: characters } = await useFetch(`${import.meta.env.VITE_HXH_BASE_URL}/characters`, {
 	query: { sort: 'createdAt', limit: 20 },
