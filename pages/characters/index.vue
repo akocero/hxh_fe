@@ -7,12 +7,10 @@
 </template>
 
 <script setup>
-const config = useRuntimeConfig();
-
-const { data: characters } = await useFetch(`${config.public.hxhBaseUrl}/characters`, {
+const { data: characters } = await useFetch(`${import.meta.env.VITE_HXH_BASE_URL}/characters`, {
 	key: 'characters-list',
 	query: { sort: 'createdAt', limit: 20 },
-	headers: { 'x-api-key': config.public.hxhApiKey },
+	headers: { 'x-api-key': import.meta.env.VITE_HXH_API_KEY },
 });
 </script>
 
