@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply text-gray-50;
+}
+
+.wrapper {
+	@apply max-w-[1342px] mx-auto;
+}
+
+pre {
+	padding: 10px;
+}
+
+.string { color: #c5a73d; }
+.number { color: #ad4a87; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: #01db6e; }
