@@ -18,7 +18,8 @@ export default defineNuxtConfig({
 			meta: [
 				{ name: 'theme-color', content: '#dc2626' },
 				{ name: 'author', content: 'Eugene Paul Badato' },
-				{ name: 'robots', content: 'index, follow' }
+				{ name: 'robots', content: 'index, follow' },
+				{ name: 'google-site-verification', content: '_DQLzfGZNOJ3YS2XgNmjp2OFxeUkyFDkn14XPgpWcQg' }
 			],
 			link: [
 				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
