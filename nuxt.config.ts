@@ -8,7 +8,16 @@ export default defineNuxtConfig({
 		name: 'Hunter x Hunter API'
 	},
 	sitemap: {
-		strictNuxtContentPaths: false
+		strictNuxtContentPaths: false,
+		exclude: [
+			'/login',
+			'/register',
+			'/dashboard',
+			'/forgot-password',
+			'/verify',
+			'/verify-email',
+			'/reset-password/**'
+		]
 	},
 	app: {
 		head: {
