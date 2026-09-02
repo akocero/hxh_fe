@@ -14,9 +14,11 @@ const introImg = '/img/intro_img.webp';
 				Database API
 			</h1>
 			<p class="text-gray-400">
-				Welcome to the Hunter X Hunter API! This guide is your key to exploring the world of
-				HTTP requests in the Hunter X Hunter universe. Before you embark on your
-				data-gathering quest.
+				Welcome to the Hunter x Hunter Database API — your all-access Hunter license to explore the rich
+				world of Gon, Killua, Kurapika, and beyond. Whether you're hunting for character profiles, group
+				affiliations, or deep lore, this API harnesses the power of Nen to deliver fast, structured JSON
+				responses. Equip yourself with an API key and start querying the HxH universe like a true
+				professional Hunter.
 			</p>
 			<div class="h-10 flex items-center space-x-4 mt-10 justify-center md:justify-start">
 				<a

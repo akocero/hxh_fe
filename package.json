@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/icon": "^2.5.1",
+    "@nuxtjs/sitemap": "^6.0.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@pinia/nuxt": "^1.0.2",
     "nuxt": "^4.5.2",
