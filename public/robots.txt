@@ -1,3 +1,10 @@
 User-Agent: *
-Disallow:
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /forgot-password
+Disallow: /verify
+Disallow: /verify-email
+Disallow: /reset-password/
+
 Sitemap: https://hxh.eugenebadato.com/sitemap.xml

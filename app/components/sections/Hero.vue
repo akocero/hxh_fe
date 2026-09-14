@@ -8,14 +8,16 @@
 			</div>
 			<div class="max-w-lg">
 				<h2
-					class="text-2xl md:text-4xl font-sans mb-4 font-extrabold uppercase drop-shadow"
+					class="font-bebas text-4xl md:text-6xl leading-none tracking-wide mb-4"
 					v-html="details.title"></h2>
-				<p class="text-gray-400">{{ details.sub_title }}</p>
-				<div class="mt-10 h-10 flex items-end">
+				<p class="text-gray-400 leading-relaxed">{{ details.sub_title }}</p>
+				<div class="mt-10">
 					<button
 						@click="details.button.fn"
-						class="rounded-lg font-semibold bg-gray-800 text-gray-50 px-8 py-3 hover:bg-gray-700">
-						{{ details.button.label }}
+						class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold uppercase tracking-[0.12em] text-sm hover:bg-red-500 transition-colors duration-200 group"
+						style="box-shadow: 0 0 24px rgba(200,30,30,0.3);">
+						<span>{{ details.button.label }}</span>
+						<span class="transition-transform group-hover:translate-x-1">→</span>
 					</button>
 				</div>
 			</div>
