@@ -15,7 +15,7 @@ useSeoMeta({
 		'Learn about the Hunter x Hunter REST API — a free, open-source project built to give developers access to HxH character and group data in clean JSON format.',
 	ogDescription:
 		'Learn about the Hunter x Hunter REST API — a free, open-source project built to give developers access to HxH character and group data in clean JSON format.',
-	ogImage: 'https://hxh.eugenebadato.com/img/og_img.png',
+	ogImage: 'https://hxh.eugenebadato.com/img/og.jpeg',
 	ogUrl: 'https://hxh.eugenebadato.com/about',
 	ogType: 'website',
 	twitterCard: 'summary_large_image'

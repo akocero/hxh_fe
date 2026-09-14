@@ -6,10 +6,18 @@
 
 body {
 	@apply text-gray-50;
+	overflow-x: hidden;
 }
 
 .wrapper {
 	@apply max-w-[1342px] mx-auto;
+}
+
+/* Full-bleed breakout — use on sections that need to span 100vw */
+.breakout {
+	width: 100vw;
+	margin-left: 50%;
+	transform: translateX(-50%);
 }
 
 pre {
@@ -21,3 +29,48 @@ pre {
 .boolean { color: blue; }
 .null { color: magenta; }
 .key { color: #01db6e; }
+
+/* ── Anime-style animations ───────────────────────────── */
+
+@keyframes nen-pulse {
+	0%, 100% { opacity: 0.45; transform: scale(1); }
+	50%       { opacity: 0.9;  transform: scale(1.1); }
+}
+
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50%       { transform: translateY(-18px); }
+}
+
+@keyframes drift {
+	0%, 100% { transform: translateY(0px) translateX(0px); }
+	33%       { transform: translateY(-12px) translateX(8px); }
+	66%       { transform: translateY(8px) translateX(-8px); }
+}
+
+@keyframes shimmer-x {
+	0%   { background-position: -200% center; }
+	100% { background-position:  200% center; }
+}
+
+@keyframes scan-line {
+	0%   { top: -5%; }
+	100% { top: 105%; }
+}
+
+.animate-nen-pulse { animation: nen-pulse 3.5s ease-in-out infinite; }
+.animate-float     { animation: float    4.5s ease-in-out infinite; }
+.animate-drift     { animation: drift    7s   ease-in-out infinite; }
+
+/* ── Nen glow helpers ─────────────────────────────────── */
+
+.glow-red        { box-shadow: 0 0 24px rgba(200,30,30,0.45); }
+.glow-red-text   { text-shadow: 0 0 24px rgba(200,30,30,0.7); }
+
+/* ── Anime clip-path card corner ─────────────────────── */
+.clip-corner-tr {
+	clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.clip-corner-tr-sm {
+	clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
